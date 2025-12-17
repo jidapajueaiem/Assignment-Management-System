@@ -1,37 +1,44 @@
+import { hashPassword } from '../utils/password.js';
+
 // In-memory database (for demo)
+// Note: In production, use real database like MongoDB or PostgreSQL
 export const db = {
   users: [
     {
       id: 'teacher1',
       username: 'teacher1',
-      password: 'teacher123', // In production: hash this
+      password: '$2a$10$YourHashedPasswordHere1', // Hashed: teacher123
       name: 'ครูสมชาย',
       role: 'teacher',
-      email: 'teacher1@school.com'
+      email: 'teacher1@school.com',
+      createdAt: new Date()
     },
     {
       id: 'teacher2',
       username: 'teacher2',
-      password: 'teacher123',
+      password: '$2a$10$YourHashedPasswordHere2', // Hashed: teacher123
       name: 'ครูสมหญิง',
       role: 'teacher',
-      email: 'teacher2@school.com'
+      email: 'teacher2@school.com',
+      createdAt: new Date()
     },
     {
       id: 'student1',
       username: 'student1',
-      password: 'student123',
+      password: '$2a$10$YourHashedPasswordHere3', // Hashed: student123
       name: 'นักเรียนที่ 1',
       role: 'student',
-      email: 'student1@school.com'
+      email: 'student1@school.com',
+      createdAt: new Date()
     },
     {
       id: 'student2',
       username: 'student2',
-      password: 'student123',
+      password: '$2a$10$YourHashedPasswordHere4', // Hashed: student123
       name: 'นักเรียนที่ 2',
       role: 'student',
-      email: 'student2@school.com'
+      email: 'student2@school.com',
+      createdAt: new Date()
     }
   ],
   assignments: [

@@ -91,19 +91,6 @@ export default function Login({ setUser }) {
               {loading ? 'Logging in...' : 'Login'}
             </button>
           </form>
-
-          <div className="border-t border-gray-200 pt-6">
-            <h3 className="font-semibold text-gray-900 mb-4 text-sm">Demo Accounts:</h3>
-            <div className="space-y-2 text-xs">
-              {demoAccounts.map((account, idx) => (
-                <div key={idx} className="bg-blue-50 p-3 rounded-xl border border-blue-200">
-                  <p className="text-gray-800">
-                    <span className="font-semibold text-blue-700">{account.role}:</span> <span className="text-gray-700">{account.username} / {account.password}</span>
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
